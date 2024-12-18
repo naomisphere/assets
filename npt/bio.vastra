@@ -1,0 +1,130 @@
+#!/usr/bin/env sh
+set -eu
+set -o pipefail
+
+# why i created a function for this? dw about it
+# why i bothered setting preventive options? dw about it
+
+
+ml='~/'
+bio() { 
+clear
+echo ""
+echo " [>] Loading bio.vastra.."
+sleep 1.1
+echo "
+                       <%
+            -----              _______________________________________________
+   --                  .::.
+       --           .:'  .:     \033[1;34mbio.vastra\033[0m v0.1 | vastra's bio
+          ,MMM8&&&.:'   .:'     \033[1;34marchitecture:\033[0m $(uname -m)
+ --%--   MMMMM88&&&&  .:'       \033[1;37mkernel:\033[0m $(uname -or)  | i wonder if its linux..
+        MMMMM88&&&&&&:'         too lazy to code me the answer.
+        MMMMM88&&&&&&           \033[1;37mworkspace:\033[0m vastra's haven ♪
+      .:MMMMM88&&&&&&           \033[1;37mhey:\033[0m how's your day today?
+    .:'  MMMMM88&&&&            _______________________________________________
+  .:'   .:'MMM8&&&'           
+  :'  .:'       --
+  '::'               ---|---
+       @--                                                  
+"
+  
+echo ""
+sleep 4
+clear
+                                                         echo
+  echo " / \033[1;34mxo1v\033[0m \\ xo @ GMT-4"
+echo " vastra - i forgot what i was going to put here ngl"
+echo " \/"
+echo " \/"
+echo " i like \033[1;34mvisual novels\033[0m, horror games, JRPGs,"
+echo " documentaries, and \033[1;37mapple silicon\033[0m."
+
+echo ""
+echo " here's more of me, even tho no one asked:"
+echo " (these are only clickable on some term emulators)"
+printf '\e]8;;https://mp3.nekoweb.org\e\\ nekoweb\e]8;;\e\\\n'
+printf '\e]8;;https://guns.lol/xo1v\e\\ guns.lol\e]8;;\e\\\n'
+printf '\e]8;;https://qvr.neocities.org\e\\ neocities\e]8;;\e\\\n'
+
+echo ""
+echo " https://mp3.nekoweb.org"
+echo " https://guns.lol/xo1v"
+echo " https://qvr.neocities.org"
+
+sleep 7
+echo ""
+
+}
+
+
+
+winbio() { 
+clear
+echo ""
+echo " [>] Loading bio.vastra.."
+sleep 1.1
+echo "
+                       <%
+            -----              _______________________________________________
+   --                  .::.
+       --           .:'  .:     bio.vastra | vastra's bio
+          ,MMM8&&&.:'   .:'     architecture: $(uname -m)
+ --%--   MMMMM88&&&&  .:'       kernel: $(uname -or)  | i wonder if its linux..
+        MMMMM88&&&&&&:'         too lazy to code me the answer.
+        MMMMM88&&&&&&           workspace: vastra's haven ♪
+      .:MMMMM88&&&&&&           hey: how's your day today?
+    .:'  MMMMM88&&&&            _______________________________________________
+  .:'   .:'MMM8&&&'           
+  :'  .:'       --
+  '::'               ---|---
+       @--                                                  
+"
+  
+echo ""
+sleep 4
+clear
+                                                         echo
+  echo " / xo1v \\ xo @ GMT-4"
+echo " vastra - i forgot what i was going to put here ngl"
+echo " \/"
+echo " \/"
+echo " i like \033[1;34mvisual novels\033[0m, horror games, JRPGs,"
+echo " documentaries, and apple silicon."
+
+echo ""
+echo " here's more of me, even tho no one asked:"
+echo " (these are only clickable on some term emulators)"
+printf '\e]8;;https://mp3.nekoweb.org\e\\ nekoweb\e]8;;\e\\\n'
+printf '\e]8;;https://guns.lol/xo1v\e\\ guns.lol\e]8;;\e\\\n'
+printf '\e]8;;https://qvr.neocities.org\e\\ neocities\e]8;;\e\\\n'
+
+echo ""
+echo " https://mp3.nekoweb.org"
+echo " https://guns.lol/xo1v"
+echo " https://qvr.neocities.org"
+
+sleep 7
+echo ""
+
+}
+
+
+
+if [ "$(uname)" == "Darwin" ]; then
+echo " [>] i love my apples red"
+sleep 1.4
+bio
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+echo " [>] nixos 4 the win"
+sleep 1.4
+bio
+elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
+echo " [>] oyasumi oyasumi close your eyes and you'll leave this dream"
+sleep 1.4
+winbio
+elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
+echo " [>] 32-bit windows? that's uhh.. remarkable."
+sleep 1.4
+winbio
+fi
